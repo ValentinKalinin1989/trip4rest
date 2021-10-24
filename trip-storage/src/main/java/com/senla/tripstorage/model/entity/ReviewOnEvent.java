@@ -1,23 +1,14 @@
-package com.senla.tripstorage.model;
+package com.senla.tripstorage.model.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
-/**
- * отзывы на места, событи и маршрут
- * @param <T> - Event, Place, Trip
- * состоит из:
- * типа объект
- * пользователя
- * рейтинга
- * текста отзыва
- */
 @Data
 @Entity
-@Table(name = "review_on_trips")
-public class ReviewOnTrip {
+@Table(name = "review_on_events")
+public class ReviewOnEvent {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
@@ -28,7 +19,7 @@ public class ReviewOnTrip {
     private Usr usr;
 
     @ManyToOne
-    private Trip trip;
+    private Event event;
     private Integer userRate;
     private String description;
 }

@@ -1,4 +1,4 @@
-package com.senla.tripstorage.model;
+package com.senla.tripstorage.model.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
@@ -7,8 +7,8 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "review_on_events")
-public class ReviewOnEvent {
+@Table(name = "review_on_places")
+public class ReviewOnPlace {
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
@@ -19,7 +19,7 @@ public class ReviewOnEvent {
     private Usr usr;
 
     @ManyToOne
-    private Event event;
+    private Place place;
     private Integer userRate;
     private String description;
 }

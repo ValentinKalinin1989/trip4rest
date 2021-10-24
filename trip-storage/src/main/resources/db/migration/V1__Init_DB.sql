@@ -29,9 +29,11 @@ create table event_types
 
 create table events
 (
-    uuid            varchar(255) not null,
-    duration_time   int8,
-    end_date_time   timestamp,
+    uuid varchar(255) not null,
+    description varchar(255),
+    duration_time int8,
+    end_date_time timestamp,
+    name varchar(255),
     start_date_time timestamp,
     event_type_uuid varchar(255),
     primary key (uuid)
@@ -228,10 +230,6 @@ alter table if exists trips
     add constraint trips_to_coordinates_fk
     foreign key (end_coordinate_uuid) references coordinates;
 
-alter table if exists trips
-    add constraint trips_to_coordinates_fk
-    foreign key (start_coordinate_uuid) references coordinates;
-
 alter table if exists usr_chat
     add constraint usr_chat_to_usrs_fk
     foreign key (usr_uuid) references usrs;
@@ -251,10 +249,6 @@ alter table if exists usr_to_chat
 alter table if exists usr_to_friend
     add constraint usr_to_friend_to_usrs_fk
     foreign key (friend_uuid) references usrs;
-
-alter table if exists usr_to_friend
-    add constraint usr_to_friend_to_usrs_fk
-    foreign key (usr_uuid) references usrs;
 
 alter table if exists usr_to_profile
     add constraint usr_to_profile_to_profiles_fk

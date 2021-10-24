@@ -1,4 +1,4 @@
-package com.senla.tripstorage.model;
+package com.senla.tripstorage.model.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
