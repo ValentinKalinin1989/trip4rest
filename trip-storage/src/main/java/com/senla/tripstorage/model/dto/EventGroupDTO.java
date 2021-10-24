@@ -8,5 +8,6 @@ import java.util.Set;
 @Setter
 public class EventGroupDTO {
     private String uuid;
+    private String name;
     private Set<EventTypeDTO> eventTypes;
 }

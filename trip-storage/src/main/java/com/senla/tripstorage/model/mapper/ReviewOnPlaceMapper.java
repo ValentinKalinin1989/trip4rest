@@ -4,7 +4,7 @@ import com.senla.tripstorage.model.entity.ReviewOnPlace;
 import com.senla.tripstorage.model.dto.ReviewOnPlaceDTO;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface ReviewOnPlaceMapper {
     ReviewOnPlaceDTO reviewOnPlaceToReviewOnPlaceDTO(ReviewOnPlace reviewOnPlace);
     ReviewOnPlace reviewOnPlaceDTOtoReviewOnPlace(ReviewOnPlaceDTO reviewOnPlaceDTO);

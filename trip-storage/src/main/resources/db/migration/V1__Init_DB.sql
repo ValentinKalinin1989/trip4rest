@@ -16,6 +16,7 @@ create table coordinates
 create table event_groups
 (
     uuid varchar(255) not null,
+    name varchar(255),
     primary key (uuid)
 );
 

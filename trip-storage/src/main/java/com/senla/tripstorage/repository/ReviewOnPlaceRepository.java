@@ -1,6 +1,7 @@
 package com.senla.tripstorage.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import com.senla.tripstorage.model.entity.ReviewOnPlace;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ReviewOnPlaceRepository extends CrudRepository<ReviewOnPlaceRepository, Long> {
+public interface ReviewOnPlaceRepository extends JpaRepository<ReviewOnPlace, Long> {
 }

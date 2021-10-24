@@ -20,6 +20,8 @@ public class EventGroup {
     @Column(name = "uuid", unique = true)
     private String uuid;
 
+    private String name;
+
     @OneToMany (cascade = CascadeType.ALL)
     @JoinColumn (name = "event_types_uuid")
     private Set<EventType> eventTypes;

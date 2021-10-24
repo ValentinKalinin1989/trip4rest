@@ -1,7 +1,7 @@
 package com.senla.tripstorage.repository;
 
 import com.senla.tripstorage.model.entity.Event;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface EventRepository extends CrudRepository<Event, Long> {
+public interface EventRepository extends JpaRepository<Event, Long> {
 }

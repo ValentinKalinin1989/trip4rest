@@ -4,7 +4,7 @@ import com.senla.tripstorage.model.entity.Usr;
 import com.senla.tripstorage.model.dto.*;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface UsrMapper {
     Usr usrRegistrationDTOtoUsr(UsrRegistrationDTO usrRegistrationDTO);
     UsrCredentialDTO usrToUsrCredentialDTO(Usr usr);
