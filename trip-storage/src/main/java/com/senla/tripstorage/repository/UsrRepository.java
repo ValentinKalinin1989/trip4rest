@@ -4,4 +4,6 @@ import com.senla.tripstorage.model.entity.Usr;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UsrRepository extends JpaRepository<Usr, Long> {
+    void deleteByUuid(String uuid);
+    Usr findByUuid(String uuid);
 }

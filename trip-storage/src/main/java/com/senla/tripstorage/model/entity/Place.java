@@ -4,6 +4,7 @@ import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * место, где происходят события,
@@ -29,4 +30,8 @@ public class Place {
     @OneToOne
     @JoinColumn(name = "coordinates_uuid")
     private Coordinate coordinate;
+
+    @OneToMany (cascade = CascadeType.ALL)
+    @JoinColumn (name = "place_uuid")
+    private Set<Event> events;
 }
