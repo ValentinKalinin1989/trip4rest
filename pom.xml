@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-<!--        <module>deep-thought</module>-->
-<!--        <module>developer</module>-->
+        <module>trip-storage</module>
+        <module>eureka</module>
     </modules>
     <packaging>pom</packaging>
 
