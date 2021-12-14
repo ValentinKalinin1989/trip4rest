@@ -24,12 +24,21 @@ public class Place {
     @Column(name = "uuid", unique = true)
     private String uuid;
 
+    @Column(name = "type_place")
+    private String type;
     private String name;
     private String description;
 
     @OneToOne
     @JoinColumn(name = "coordinates_uuid")
     private Coordinate coordinate;
+
+    private String phone;
+    private String site;
+    @Column(name = "info_place")
+    private String info;
+    @Column(name = "work_time")
+    private String workTime;
 
     @OneToMany (cascade = CascadeType.ALL)
     @JoinColumn (name = "place_uuid")

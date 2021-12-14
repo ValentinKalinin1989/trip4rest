@@ -1,19 +1,17 @@
-package com.senla.tripstorage.model.dto;
+package com.senla.afishaparser.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-public class PlaceDTO {
+@Data
+public class Place {
+
     private String uuid;
     private String type;
     private String name;
     private String description;
-    private CoordinateDTO coordinate;
+    private Coordinate coordinate;
     private String phone;
     private String site;
     private String info;
     private String workTime;
-
 }
